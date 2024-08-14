@@ -39,4 +39,10 @@ A total of 30 distinct test cases are executed, each run 50 times, culminating i
 
 In addition to limiting the server to run on different numbers of CPU cores, the testing strategy includes simulating varying levels of client-side concurrency. This is achieved by altering the number of client instances simultaneously sending requests to the server.
 
+### Adjusting Client Load:
+The number of concurrent client instances, referred to as ”instances”, is systematically varied during tests. This approach allows the evaluation of server performance under different levels of client request loads.
+
+### Simultaneous Request Dispatch: 
+The method involves initiating multiple clients concurrently, each sending requests to the server at the same time. This setup mimics real-world scenarios where a server may face simultaneous incoming traffic from numerous sources
+
 
