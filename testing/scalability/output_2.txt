@@ -1,0 +1,20 @@
+Running clients with 1 cores
+Execution time: 50.063804650 seconds
+Total Requests: 1500
+Throughput: 29.96 requests/second
+--------------------------------
+Running clients with 2 cores
+Execution time: 46.718822679 seconds
+Total Requests: 1500
+Throughput: 32.10 requests/second
+--------------------------------
+Running clients with 4 cores
+Execution time: 46.407816023 seconds
+Total Requests: 1500
+Throughput: 32.32 requests/second
+--------------------------------
+Running clients with 8 cores
+Execution time: 46.326991464 seconds
+Total Requests: 1500
+Throughput: 32.37 requests/second
+--------------------------------

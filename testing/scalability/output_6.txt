@@ -1,0 +1,5 @@
+Running clients with 8 cores
+Execution time: 81.790948118 seconds
+Total Requests: 3000
+Throughput: 36.67 requests/second
+--------------------------------

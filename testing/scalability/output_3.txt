@@ -1,0 +1,11 @@
+Running clients with 8 cores
+taskset: failed to set pid 2623443's affinity: No such process
+taskset: failed to set pid 2645329's affinity: No such process
+taskset: failed to set pid 2661405's affinity: No such process
+taskset: failed to set pid 2672949's affinity: No such process
+taskset: failed to set pid 2723045's affinity: No such process
+taskset: failed to set pid 2730650's affinity: No such process
+Execution time: 82.414206301 seconds
+Total Requests: 3000
+Throughput: 36.40 requests/second
+--------------------------------

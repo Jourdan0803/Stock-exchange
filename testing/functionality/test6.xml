@@ -1,0 +1,9 @@
+267
+<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<transactions id="2"> 
+ <order sym="b" amount="-150" limit="40"/>
+ <order sym="b" amount="-50" limit="30"/>
+ <order sym="b" amount="-30" limit="30"/>
+ <order sym="b" amount="-50" limit="10"/>
+ <query id="1"/>
+</transactions>

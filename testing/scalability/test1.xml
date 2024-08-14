@@ -1,0 +1,18 @@
+396
+<?xml version="1.0" encoding="UTF-8"?>
+<create>
+  <account id="1" balance="100000"/>
+  <account id="2" balance="100000"/>
+  <symbol sym="a">
+    <account id="1">1000</account>
+  </symbol>
+  <symbol sym="b">
+    <account id="1">1000</account>
+  </symbol>
+  <symbol sym="c">
+    <account id="1">1000</account>
+  </symbol>
+  <symbol sym="d">
+    <account id="1">1000</account>
+  </symbol>
+</create>

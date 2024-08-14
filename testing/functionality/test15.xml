@@ -1,0 +1,7 @@
+160
+<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<transactions id="9"> 
+ <order sym="b" amount="300" limit="30"/>
+ <cancel id="12"/>
+ <query id="16"/>
+</transactions>

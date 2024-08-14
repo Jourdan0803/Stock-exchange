@@ -1,0 +1,8 @@
+202
+<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<transactions id="3"> 
+ <order sym="d" amount="-50" limit="40"/>
+ <order sym="d" amount="-120" limit="10"/>
+ <query id="20"/>
+ <query id="22"/>
+</transactions>

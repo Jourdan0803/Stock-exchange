@@ -1,0 +1,6 @@
+Running clients with 8 cores
+taskset: failed to set pid 2708308's affinity: No such process
+Execution time: 82.741557567 seconds
+Total Requests: 3000
+Throughput: 36.25 requests/second
+--------------------------------
