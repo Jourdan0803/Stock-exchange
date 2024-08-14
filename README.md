@@ -1,7 +1,26 @@
 
 ---
 
-# Project Design
+# Multi-threaded Stock Exchange Matching Server
+This project focuses on developing a robust multi-threaded server architecture designed to handle XML transactions for stock and commodities exchange matching efficiently. Leveraging modern C++ standards and PostgreSQL, the system is built to offer high scalability and performance under varying load conditions.
+Below is a simple introduction for your project, tailored for a README.md file:
+
+
+## Project Overview
+
+This project focuses on developing a robust multi-threaded server architecture designed to handle XML transactions for stock and commodities exchange matching efficiently. Leveraging modern C++ standards and PostgreSQL, the system is built to offer high scalability and performance under varying load conditions.
+
+## Key Features
+
+- **Multi-threaded Processing:** Utilizes the std::thread class to handle incoming client requests independently and concurrently, ensuring fast and reliable transaction processing.
+- **Scalable Database Design:** Incorporates a well-structured PostgreSQL database to manage transaction data effectively, with an emphasis on maintaining high data integrity and quick access.
+- **Performance Optimization:** Employs a lock-free data structure approach to handle open requests, significantly reducing the performance bottlenecks typically associated with mutexes.
+- **Load and Scalability Testing:** Conducts comprehensive testing across multiple CPU cores, simulating different operational scenarios to assess the system's capacity and scalability limits.
+
+## Objective
+
+The main objective of this project is to create a high-performance exchange matching engine that can handle high volumes of transactions efficiently without compromising on speed or accuracy, even during peak load times.
+
 
 ## Database Design
 
