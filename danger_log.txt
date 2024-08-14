@@ -1,0 +1,39 @@
+ECE568 HW4 danger log
+- Jinxuan Li jl1226
+- Yuyu Hsieh yh384
+
+Potential danger and current mitigation:
+- Concurrent client requests
+    - We are now using the thread per request strategy to handle concurrent client request. 
+    - If there are a large amount of concurrent requests coming in, we might create a large amount of threads and make the system very inefficient. 
+- Client authentication
+    - Right now the backend system doesn't require client authentication. This gives malicious users opportunity to mess with the server.
+    - This is very dangerous because a malicious user could potentially place order on behalf of other user, as long as they are able to obtain or guess other user's account id.
+    - It would be better if we require the client to do some form of verification
+- Client request limit
+    - Right now there are no limits in terms of how many requests a client can make in a short amount of time
+    - This could be dangerous because a malicious user could try to send a large amount of requests constantly, thus keeping the server busy and blocking the other users from accessing the service. 
+- No limit in terms of matching requests have to come from different users
+    - This leaves opportunities for malicious user to send a large amount of machable buy and sell requests and have the requests match with each other. This will keep the server busy and blocking the other users from accessing the service.
+- Database concurrency
+    - If not handeled well, concurrent request to edit the same row in database could cause problems like inconsistent data or deadlock
+    - We utilize transactions with serializable isolation level in postgres database to ensure concurrent requests will not cause inconsistency in database records.
+    - When a transaction clash with another one and throws an error, we will retry the transaction until it successfully commit. This ensures all requests are handled properly.
+- Query and Cancel request verification
+    - Right now, the system is designed such that querying order details and canceling order is based purely on transaction id. 
+    - This is dangerous because there's nothing blocking malicious users to randomly querying other user's order detail.
+    - Or worse, a malicious user will be able to cancel other user's order, if they know the transaction id, or if they take a random guess of the potential transaction id
+- Symbol verification
+    - There are no existing mechanism in the system to verify whether the symbol is a "valid" symbol that can be traded in the stock market.
+    - We will take any incoming symbol creation request and create a new symbol based on the request
+    - This is good for the project practice, but it is not a reasonable set up in the real world
+- No expiration for order
+    - Right now the order has no expiration date. This means that an open order can be stored in our system indefinitely as long as no other order can match with it
+    - This is a loophole that malicious user could potentially abuse by sending a lot of garbage orders which will never match with any other requests, and thus flooding our database with useless data
+- Database connection
+    - We have encountered problems when multiple clients try to access the server at the same time, if they share a database connection, their request will clash with each other since one database connection can only have 1 active transaction at the same time.
+    - We have overcome this issue by setting up new database connection every time we create a thread to handle a new request.
+- Database time format
+    - We have encountered some problems with the date format for the database. This is a weird behavoir because we only see this error when we have multiple clients sending concurrent requests.
+    - We have changed our code to let database add the time column automatically, and this has solved the problem.
+
