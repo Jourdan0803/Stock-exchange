@@ -15,7 +15,7 @@ The server application is designed to spawn a new thread for each incoming clien
 ### Implementation
 Utilizing the std::thread class from the C++ standard library, our server creates a thread that executes a designated function, "*handleClient*", which manages the request-specific operations.
 
-![Thread Implementation](WechatIMG602.jpeg)
+![Thread Implementation](img/WechatIMG602.jpeg)
 
 # Scalability
 
@@ -28,11 +28,11 @@ The server and client's CPU core usage is restricted in varying scenarios to 1, 
 
 From server's side, we modify the command line to limit server run on specific core:
 
-![Server CPU Limitation](WechatIMG604.jpeg)
+![Server CPU Limitation](img/WechatIMG604.jpeg)
 
 From client's side, we modify the run_test.bh to limit server run on specific core:
 
-![Client CPU Limitation](WechatIMG603.jpeg)
+![Client CPU Limitation](img/WechatIMG603.jpeg)
 
 ### Test Case Execution
 A total of 30 distinct test cases are executed, each run 50 times, culminating in 1500 requests. This approach ensures a comprehensive analysis over multiple iterations, providing a robust dataset for evaluating performance across different CPU core allocations.
