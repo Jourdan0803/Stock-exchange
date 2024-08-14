@@ -5,7 +5,7 @@
 
 ## Database Design
 
-![Database Schema](WechatIMG589.jpeg)
+![Database Schema](img/WechatIMG589.jpeg)
 
 ## Multi-thread Design
 
